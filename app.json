@@ -2,5 +2,31 @@
   "pages": [
     "pages/home/home",
     "pages/about/about"
-  ]
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "俊仔的小程序",
+    "backgroundColor": "orange",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "pages/assets/tabbar/home.png",
+        "selectedIconPath": "pages/assets/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "购物",
+        "iconPath": "pages/assets/tabbar/shop.png",
+        "selectedIconPath": "pages/assets/tabbar/shop_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }
