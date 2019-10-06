@@ -1,0 +1,14 @@
+<!--pages/images/images.wxml-->
+
+<!-- 1.image的基本使用 -->
+<!--
+  重点：
+      1.image组件可以写成单标签
+      2.image组件默认有自己的大小
+      3.image组件是一个行内块级元素（inline-block）即可以设置宽高
+ -->
+<image src='/assets/pic/dog1.jpg'/>
+
+<!-- 选中相册中的图片 -->
+<button bindtap='handleChoosePic'>选择图片</button>
+<image src='{{ imagePath }}'/>

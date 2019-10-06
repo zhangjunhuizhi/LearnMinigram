@@ -1,0 +1,72 @@
+<!--pages/scroll/scroll.wxml-->
+<!-- 1.水平滚动：scroll-x -->
+<scroll-view class='container1' scroll-x>
+  <view class='item1' wx:for='{{10}}'>{{item}}</view>
+</scroll-view>
+
+<!-- 使用官方的UI库组件 -->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+      <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+    <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+      <icon class="weui-icon-search" type="search" size="14"></icon>
+      <view class="weui-search-bar__text">搜索</view>
+    </label>
+  </view>
+  <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>
+
+<!-- 时间显示 -->
+<view>{{nowtime}}</view>
+
+<!-- 点击按钮切换字体颜色 -->
+<button size='mini' bindtap='btnyanse'>切换颜色</button>
+<view class='btn {{msg ? "active":""}}'>{{mm}}</view>
+
+<!-- wxs实际应用 -->
+<wxs src="../../wxs/format.wxs" module="format"/>
+<view>{{format.priceFormat(price)}}</view>
+
+<!-- 组件的传值/传递样式 -->
+<my-props title="哈哈哈" titleclass="red"/>
+<my-props title="呵呵呵" titleclass="green"/>
+<my-props title="嘿嘿嘿" titleclass="blue"/>
+<my-props/>
+
+<!-- 自定义组件事件的传递 -->
+<view>当前计数：{{counter}}</view>
+<my-event bind:increment="handleIncreone"/>
+
+<!-- 自定义组件练习 -->
+<w-tab titles="{{['衣服','鞋子','手机']}}" bind:itemClick="tabControlClick"/>
+
+<!-- 页面改变组件内部的数据 -->
+<button size='mini' bind:tap="handleItemNer">改变数据</button>
+<my-sel class="sel-class"/>
+
+<view>-------------------------------</view>
+<!-- 单个插槽slot的使用 -->
+<my-slot>
+<button size='mini'>我是插入的按钮</button>
+</my-slot>
+<view>-------------------------------</view>
+<my-slot>
+<slider value='60'></slider>
+</my-slot>
+<view>-------------------------------</view>
+<!-- 多个插槽的使用 -->
+<!-- 
+  注意事项：
+  1.给每一个插槽给一个名字 name属性
+  2.必须在Component（就是.js文件中）对象添加一个选项：options : { multipleSlots:true }
+ -->
+<my-mslot>
+<button size='mini' slot="slot2">我是插入的按钮</button>
+<slider slot="slot1"></slider>
+</my-mslot>

@@ -1,0 +1,3 @@
+<!--components/my-props/my-props.wxml-->
+<view class='titleclass'>{{title}}</view>
+

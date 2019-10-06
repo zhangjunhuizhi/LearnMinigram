@@ -1,0 +1,29 @@
+/* pages/scroll/scroll.wxss */
+/* 导入 官方UI库的对应组件的css文件*/
+@import './weui-searchbar.wxss';
+.container1 {
+  background: purple;
+  /* 不允许换行 不设置的话虽然会换行但是不会排在一行 */
+  white-space: nowrap;
+}
+.item1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin: 10px;
+  /* view是块级元素 要将其转换成行内块级元素才可以使他不换行 */
+  display: inline-block;
+}
+.active {
+  color: red;
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}

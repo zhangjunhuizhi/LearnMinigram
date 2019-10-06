@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "my-props": "/components/my-props/my-props",
+    "my-event": "/components/my-event/my-event",
+    "w-tab": "/components/w-tab-control/w-tab-control",
+    "my-sel": "/components/my-sel/my-sel",
+    "my-slot": "/components/my-slot/my-slot",
+    "my-mslot": "/components/my-mslot/my-mslot"
+  }
+}
