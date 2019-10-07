@@ -1,0 +1,7 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+
+<!-- 创建一个返回的按钮 -->
+<navigator open-type='navigateBack'>返回</navigator>
+
+

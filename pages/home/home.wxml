@@ -7,3 +7,20 @@
 
 <!-- 分享按钮 -->
 <button size='mini' open-type='share'>分享</button>
+
+<!-- 页面跳转 navigation -->
+<navigator url='/pages/detail/detail'>跳到详情页</navigator>
+
+<!-- 页面跳转 navigation  属性 open-type-->
+<!-- 
+  1.redirect 跳转到另一个页面之后会把前一个页面销毁掉 即没有左上角的退回按钮
+  2.
+ -->
+<navigator url='/pages/detail/detail' open-type='redirect'>跳到详情页</navigator>
+<navigator url='/pages/about/about' open-type='switchTab'>跳到详情页</navigator>
+
+
+
+<!-- 跳转过程中数据的传递 -->
+<navigator url='/pages/detail/detail?name=why&age=18&height=1.88'>跳到详情页</navigator>
+<view>{{title}}</view>

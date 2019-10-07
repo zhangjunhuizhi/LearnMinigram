@@ -1,5 +1,8 @@
 // pages/home/home.js
 Page({
+  data:{
+    title:'哈哈哈'
+  },
   handleShowToast() {
       wx.showToast({
         title: '加载中ing',
